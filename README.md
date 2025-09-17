@@ -19,7 +19,7 @@ Before you begin, ensure you have the following installed on your system:
 1. **Clone the repository to your local machine**:
 
    ```sh
-   git clone https://github.com/Jayesh370/LMS-React.git
+   git clone https://github.com/Jayesh370/LMS-System-React.git
    
 Navigate into the project directory:
 
