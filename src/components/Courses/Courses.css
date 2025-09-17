@@ -1,0 +1,167 @@
+/* ================= COMMON STYLES ================= */
+
+/* Headings */
+.first-heading {
+  background: linear-gradient(
+    45deg,
+    rgba(74, 144, 226, 0.3),
+    rgba(22, 160, 133, 0.3)
+  );
+  color: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20rem; /* applies well to all */
+}
+
+/* Navigation */
+.nav2 {
+  text-align: center;
+  margin: 20px 0;
+}
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+nav a:hover {
+  color: #008080;
+}
+
+/* Sections */
+.section {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Course Container */
+.course-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+.course-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  min-height: 250px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+.course-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.course-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.course-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.course-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Card Content */
+.course-card h3 {
+  margin: 10px 0;
+  color: #007BFF;
+  font-size: 1.2rem;
+}
+.course-card p {
+  margin: 10px 0;
+  color: #555;
+}
+
+/* Learn More Button */
+.learn-more {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.learn-more:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+/* ================= HOME PAGE EXTRAS ================= */
+.hero-main {
+  padding: 50px;
+}
+.hero-main .cta-btn {
+  padding: 12px 20px;
+  background: white;
+  color: #007BFF;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.hero-main .cta-btn:hover {
+  background: #f8d347;
+}
+.promo-banner {
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  color: white;
+  padding: 20px;
+  font-size: 1.2rem;
+  margin: 20px auto;
+  max-width: 90%;
+  border-radius: 10px;
+  text-align: center;
+}
+.btn-offer {
+  background-color: white;
+  padding: 10px;
+  border-radius: 15px;
+  text-decoration: none;
+}
+.course-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* ================= ANIMATIONS ================= */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

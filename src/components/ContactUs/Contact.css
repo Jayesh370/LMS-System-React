@@ -1,0 +1,217 @@
+/* --- Base Styles for the Contact Us Page Container --- */
+.contact-us-page {
+  /* This light gray provides a base for the faded background image */
+  background-color: #f8f9fa; 
+
+  /* 1. Sets the background image */
+  /* background-image: url('/images/contact-images/Final_Logo56.png'); */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: scroll;
+
+  min-height: 100vh;
+  width: 100%;
+}
+
+
+
+
+/* This container holds the form and gives it the semi-transparent white background */
+.contact-us-page .container {
+  /* Key Change: Bring back semi-transparent white background */
+  background: rgba(255, 255, 255, 0.85); /* Adjust 0.85 for desired transparency */
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 1; /* Ensure content container is above the faded background */
+}
+
+/* --- Headings --- */
+.contact-us-page h1.contact {
+  color: #2c3e50 !important;
+  font-weight: 700 !important;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 2.5rem;
+}
+
+.contact-us-page .para {
+  color: #555;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+/* --- Contact Form Layout --- */
+/* This .form-container provides the solid white background for the actual form elements */
+.contact-us-page .form-container {
+  padding: 20px;
+  background-color: transparent; /* Solid white background for the form itself */
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contact-us-page .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-us-page .form-label {
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #34495e;
+  display: block;
+}
+
+.contact-us-page .form-control,
+.contact-us-page .courses {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 12px 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+  transition: all 0.3s ease;
+  background-color: #f8f9fa; /* Light grey background for inputs */
+  color: #495057;
+  opacity: 1 !important; /* Ensure input text is not faded */
+}
+
+.contact-us-page .form-control:focus,
+.contact-us-page .courses:focus {
+  border-color: #80bdff;
+  box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+  outline: none;
+  background-color: #ffffff;
+}
+
+.contact-us-page .form-control:hover,
+.contact-us-page .courses:hover {
+  border-color: #90c2f0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Submit Button --- */
+.contact-us-page .btn.submit-btn {
+  background-color: #30b2a6 !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px 30px !important;
+  font-size: 1.1rem !important;
+  font-weight: 600 !important;
+  margin-top: 20px !important;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease !important;
+  box-shadow: 0 5px 15px rgba(48, 178, 166, 0.3);
+}
+
+.contact-us-page .btn.submit-btn:hover {
+  background-color: #218f84 !important;
+  transform: translateY(-2px) scale(1.02) !important;
+  box-shadow: 0 8px 20px rgba(48, 178, 166, 0.4) !important;
+}
+
+/* --- Socials Section (scoped) --- */
+.contact-us-page .socials-section {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 20px;
+  background-color: white; /* Solid white for the socials section */
+  border: 1px solid #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.contact-us-page .socials-title {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.contact-us-page .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.contact-us-page .icon-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.contact-us-page .icon-link:hover {
+  transform: scale(1.1);
+}
+
+.contact-us-page .linkdin:hover { color: #0077b5; }
+.contact-us-page .github:hover { color: #333; }
+.contact-us-page .instagram:hover { color: #e4405f; }
+.contact-us-page .whatsapp:hover { color: #25d366; }
+
+/* --- Map Section (scoped) --- */
+.contact-us-page .google-map {
+  margin-top: 45px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.contact-us-page .mapouter {
+  text-align: center;
+  width: 100%;
+  height: 400px;
+}
+
+.contact-us-page .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  width: 100%;
+  height: 400px;
+}
+
+.contact-us-page .gmap_iframe {
+  width: 100%;
+  height: 400px !important;
+  border: none;
+}
+
+/* --- Responsive Design (scoped) --- */
+@media (max-width: 768px) {
+  .contact-us-page h1.contact {
+    font-size: 1.8rem !important;
+  }
+  .contact-us-page .btn.submit-btn {
+    font-size: 0.9rem !important;
+    padding: 8px 16px !important;
+  }
+  .contact-us-page .socials-title {
+    font-size: 1.5rem;
+  }
+  .contact-us-page .icon-link {
+    transform: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-us-page .socials-title {
+    font-size: 1.3rem;
+  }
+  .contact-us-page .form-control,
+  .contact-us-page .courses {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .contact-us-page .btn.submit-btn {
+    font-size: 0.8rem !important;
+    padding: 6px 12px !important;
+  }
+}

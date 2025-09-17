@@ -1,0 +1,66 @@
+/* :root {
+    --primary-color: #30b2a6;
+    --secondary-color: #212529;
+    --text-color: #000;
+    --footer-bg: #f1f8ff;
+    --transition-time: 0.3s;
+} */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+/* html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Optional: prevents accidental horizontal scrolling 
+}  */
+:root {
+  /* Brand Colors */
+  --primary-color: #30b2a6;   /* your main theme color */
+  --bs-primary: #30b2a6;      /* for Bootstrap overrides */
+  --secondary-color: #212529;
+  --text-color: #000;
+  --dark-color: #f1f8ff;
+  --footer-bg: #f1f8ff;
+
+  /* FreeResources specific (added but still global) */
+  --accent-color: #16a085;
+  --gradient-start: #4a90e2;
+  --gradient-end: #16a085;
+
+  /* Effects */
+  --transition-time: 0.3s;
+  --transition: all 0.3s ease;
+  --transition-speed: 0.5s; /* special case from FreeResources */
+  --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --hover-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- Global Button Style --- */
+.btn {
+  display: inline-block;
+  font-weight: 600;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: rgba(30, 178, 166, 0.9);
+  color: #fff; /* White text for better contrast */
+  border: 1px solid transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: rgba(30, 178, 166, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: black;
+}

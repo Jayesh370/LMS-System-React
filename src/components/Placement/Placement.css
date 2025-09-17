@@ -1,0 +1,661 @@
+/* addional css */
+
+h1, h2, h3, h5 {
+    color: #2c3e50;
+    text-transform: uppercase;
+}
+
+p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Header Section */
+header {
+   
+    color: white;
+    /* padding: 2rem 0; */
+    text-align: center;
+    border-radius: 15px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+header p {
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+header hr {
+    border-top: 2px solid #fff;
+}
+
+/* Carousel */
+.carousel img {
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Success Stories Section */
+#success {
+    background: #eef2f3;
+    padding: 5rem 0;
+}
+
+#success h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+.card {
+    border-radius: 15px;
+    transition: transform 0.3s, box-shadow 0.3s;
+     transition: background-color 0.3s ease;
+}
+
+.card:hover {
+   background-color: #f8f9fa;
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+
+.card img {
+    border-radius: 50%;
+}
+
+.card h2 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card p {
+    color: #666;
+}
+
+.card-body .btn-primary {
+    background-color: #2575fc;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.card-body .btn-primary:hover {
+    background-color: #6a11cb;
+}
+
+/* Placement Statistics */
+#statistics {
+    text-align: center;
+    padding: 3rem 0;
+   
+}
+
+#statistics .section-title {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #2c3e50;
+}
+
+#statistics .stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.stat-item p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2575fc;
+}
+
+.stat-item span {
+    display: block;
+    color: #555;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Recruiter Partnerships */
+.container1{
+    /* background-color: #f1f1f2; */
+}
+#recruiters {
+    padding: 5rem 0;
+    text-align: center;
+}
+
+#recruiters img {
+    border: 3px solid #6a11cb;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+#recruiters img:hover {
+    transform: scale(1.1);
+    border-color: #2575fc;
+}
+
+/* Support Section */
+#support {
+    padding: 5rem 0;
+}
+
+#support .card {
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#support .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#support h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+#support .resume {
+    color: #2575fc;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-primary {
+    background-color: #2575fc;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background-color: #6a11cb;
+    transform: translateY(-3px);
+}
+/* static placement code */
+/* General Section Styling */
+#statistics {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+#statistics .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+}
+
+/* Statistics Container */
+#statistics .stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Individual Statistic Item */
+#statistics .stat-item {
+    background: #ffffff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px 30px;
+    width: 250px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#statistics .stat-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Statistic Numbers */
+#statistics .stat-item p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #007bff;
+    margin: 0;
+}
+
+#statistics .stat-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #6c757d;
+}
+/* stories additional css */
+/* General Section Styling */
+#success {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#success .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+#success hr {
+    border: 1px solid #007bff;
+    width: 50px;
+    margin: 20px auto;
+}
+
+/* Card Styling  0 0 0 0.1*/
+#success .card {
+    background-color: #ffffff;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#success .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* Profile Image  rgba 0 0 0 0.2*/
+#success .card img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    padding: 5px;
+    margin: 20px auto;
+}
+
+/* Card Titles */
+#success .card h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+    margin: 10px 0;
+}
+
+/* Card Text */
+#success .card p {
+    font-size: 1rem;
+    color: #6c757d;
+    margin: 10px 20px;
+    line-height: 1.5;
+}
+
+/* Call to Action Button */
+#success .card .btn {
+    background-color: #007bff;
+    border: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+#success .card .btn:hover {
+    background-color: #0056b3;
+    color: #ffffff;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    #success .card {
+        margin-bottom: 20px;
+    }
+}
+/* imporved placament rate */
+/* General Styling for the Section */
+.row.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 15px;
+}
+
+.row.container .col-lg-4 {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+/* Card Styling */
+.row.container .card {
+    width: 100%;
+    max-width: 320px;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.row.container .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Image */
+.row.container .card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #007bff;
+}
+
+/* Card Body */
+.row.container .card .card-body {
+    text-align: center;
+    padding: 20px;
+}
+
+.row.container .card .card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #343a40;
+    margin-bottom: 10px;
+}
+
+.row.container .card .card-text {
+    font-size: 1rem;
+    color: #6c757d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Buttons */
+.row.container .card .btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.row.container .card .btn:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .row.container {
+        padding: 30px 10px;
+    }
+
+    .row.container .card {
+        margin-bottom: 20px;
+    }
+}
+/* parternership css */
+/* General Section Styling */
+#recruiters {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#recruiters .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+
+
+/* Recruiter Logos */
+#recruiters .d-flex img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ced4da;
+    padding: 10px;
+    margin: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: #ffffff;
+}
+/* 0000.2 */
+#recruiters .d-flex img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(66, 218, 235, 0.2);
+    border-color: #007bff;
+}
+
+/* Flexbox Layout */
+#recruiters .d-flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #recruiters .section-title {
+        font-size: 2rem;
+    }
+
+    #recruiters .d-flex img {
+        width: 120px;
+        height: 120px;
+    }
+}
+/* resume support */
+/* General Section Styling */
+#support {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+}
+
+#support .container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+#support .row {
+    margin-bottom: 30px;
+}
+
+/* Card Styling */
+#support .border {
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#support .border:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Card Content */
+#support .col p {
+    font-size: 1rem;
+    color: #6c757d;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+#support .col h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #343a40;
+    margin-bottom: 15px;
+}
+
+#support .col strong.resume {
+    font-size: 1.1rem;
+    color: #007bff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Link Styling */
+#support .icon-link {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #007bff;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+#support .icon-link:hover {
+    color: #0056b3;
+}
+
+/* Image Styling */
+#support .col-auto img {
+    width: 200px;
+    height: 320px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #support .col-auto img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    #support .row {
+        flex-direction: column;
+    }
+
+    #support .border {
+        margin-bottom: 20px;
+    }
+}
+/* crousel section  */
+/* General Header Styling */
+header {
+    background-color: #f8f9fa;
+    color: #343a40;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    color: #007bff;
+    animation: fadeInDown 1s ease-out;
+}
+
+header hr {
+    border: 1px solid gray;
+    width: 100px;
+    margin: 20px auto;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #6c757d;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: inline-block;
+    margin: 20px auto;
+    max-width: 600px;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Carousel Styling */
+#carouselExampleSlidesOnly {
+    margin-top: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+#carouselExampleSlidesOnly .carousel-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+#carouselExampleSlidesOnly .carousel-item img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    #carouselExampleSlidesOnly {
+        max-width: 100%;
+    }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* success image */
+img.rounded-circle {
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid gray; /* Primary color border */
+    padding: 5px; /* Padding inside the border */
+    margin: 20px; /* Space around the image  0 0 0 0.2*/
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+}
+
+img.rounded-circle:hover {
+    transform: scale(1.1); /* Slightly enlarges the image on hover */
+    box-shadow: 0 8px 16px rgba(4, 200, 222, 0.2); /* Enhances shadow on hover */
+}

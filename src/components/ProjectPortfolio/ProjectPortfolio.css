@@ -1,0 +1,211 @@
+ 
+.firstcont {
+    margin-top: 9rem;
+    text-align: center;
+    opacity: 0;
+    /* Initially hidden */
+    transform: translateY(-100px);
+    /* Position outside the view */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.firstHeading {
+    text-transform: uppercase;
+    font-size: Bold;
+    word-spacing: .5rem;
+}
+
+.firstpara {
+    text-transform: capitalize;
+    line-height: 1.5;
+}
+
+.section-title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.view-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+}
+
+.view-more span {
+    margin-right: 5px;
+}
+
+.view-more:hover {
+    color: #0056b3;
+}
+
+.view-more i {
+    font-size: 1.2rem;
+    /* Icon size */
+}
+
+/* Project Section Styles */
+.project-section,
+.case-studies-section {
+    /* background-color: #cf0d0d; */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+/* .card {
+    border: none;
+    border: 2px solid black;
+    border-radius: 1rem;
+    box-shadow: 0 3px 8px rgb(0, 0, 0,0.25);
+    /* transform: scale(0.85); */
+/* }
+
+.card:hover {
+    /* transform: scale(0.9); */
+/* transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.50);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.card-text {
+    color: #555;
+} */
+.card {
+    width: 90%;
+    height: 360px;
+    margin: 0 auto;
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: scale(0.95);
+    overflow: hidden;
+    /* To prevent content overflow */
+}
+
+.card:hover {
+    transform: scale(1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.50);
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.card-img-top {
+    height: 150px;
+    /* Adjust the image height */
+    object-fit: cover;
+    /* To ensure the image is cropped properly */
+}
+
+.card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.card-text {
+    font-size: 1rem;
+    color: #555;
+}
+
+
+.btn-primary {
+    background-color: #007bff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+}
+
+/* student contribution section */
+/* Student Contribution Section */
+.student-contribution-section {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.view-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s;
+}
+
+.view-more span {
+    margin-right: 5px;
+}
+
+.view-more:hover {
+    color: #0056b3;
+}
+
+.view-more i {
+    font-size: 1.2rem;
+}
+
+.carousel-item {
+    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+}
+
+/* .card {
+    border: none;
+    border-radius: 1rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+    transform: scale(0.9);
+}
+
+.card:hover {
+    transform: scale(0.95);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+} */
+
+/* .card-text {
+    color: #555;
+}
+
+.img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+} */
+.img {
+    width: 100%;
+    object-fit: cover;
+    height: 200px;
+}
+
+

@@ -1,0 +1,125 @@
+/* --- General Page & Breadcrumb Styles --- */
+body {
+  background-color: #f4f7f6; /* Soft, off-white background for the whole page */
+}
+
+.breadcrumb {
+  background: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+.breadcrumb-item a {
+  text-decoration: none;
+  color: #0d6efd; /* Consistent blue for links */
+}
+.breadcrumb-item a:hover {
+  text-decoration: underline;
+}
+
+/* --- Cleaned & Enhanced Sidebar --- */
+.sidebar {
+  position: sticky;
+  top: 80px; /* Space for your 60px fixed navbar + a little extra */
+  height: calc(100vh - 80px);
+  background: #ffffff; /* Cleaner white background */
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e9ecef;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.sidebar h5 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #333;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.sidebar li a { /* Targeting the NavLink component */
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #555;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.sidebar li a:hover {
+  background-color: #e9ecef;
+  color: #000;
+}
+
+/* Style for the ACTIVE category link */
+.sidebar li a.active {
+  background-color: #0d6efd;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.3);
+}
+
+/* --- Enhanced Content Card --- */
+.content-area {
+  background-color: #ffffff;
+  padding: 2rem;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.content-area:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.content-area h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #212529;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f0f0f0; /* Underline for the title */
+  margin-bottom: 1.5rem;
+}
+
+.content-area p {
+  line-height: 1.7; /* Increased line spacing */
+  color: #495057;
+}
+
+/* --- Styles for Industry Trends Page (No changes needed) --- */
+.stat-box {
+  padding: 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+.news-item {
+  padding: 15px;
+  margin-bottom: 15px;
+  border-left: 4px solid #007bff;
+  background: #fff;
+}
+
+.news-container {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: #e7f1ff;
+}
