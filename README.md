@@ -1,12 +1,53 @@
-# React + Vite
+## 🚀 Getting Started
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### ✅ Prerequisites
 
-## Expanding the ESLint configuration
+Before you begin, ensure you have the following installed on your system:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Node.js and npm**  
+  This project requires Node.js and the Node Package Manager (npm).  
+  You can download the LTS version from [nodejs.org](https://nodejs.org).
+
+---
+
+### ⚙️ Installation
+
+1. **Clone the repository to your local machine**:
+
+   ```sh
+   git clone https://github.com/Jayesh370/LMS-React.git
+   
+Navigate into the project directory:
+
+**cd LMS-React**
+
+Install all dependencies:
+
+The package.json file includes all necessary libraries. Run the following command in your terminal to install them all at once:
+
+**npm install**
+
+This single command will install:
+
+react-router-dom,
+bootstrap,
+aos,
+react-icons,
+
+and any other required packages.
+
+▶️ Available Scripts
+
+In the project directory, you can run:
+
+Start development server:
+
+**npm run dev**
+
+This runs the app in development mode.
+Open the local URL shown in your terminal (usually http://localhost:5173) to view it in your browser.
+The page will automatically reload when you make changes.
