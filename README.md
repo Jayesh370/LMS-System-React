@@ -1,53 +1,93 @@
+<div align="center">
+  <img src="src/assets/Final_Logo.png" alt="Coding Savvy Logo" width="200"/>
+  
+  [![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+  [![Vite](https://img.shields.io/badge/Vite-7.1.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+  [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.8-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+  [![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
+</div>
+
+## 📖 About
+
+**Coding Savvy** is a comprehensive educational platform designed to guide users through their entire coding journey—from writing their first line of code to landing a dream job in the tech industry. This project was built using React to create a modern, fast, and interactive single-page application.
+
+
+## 🛠️ Tech Stack
+
+| Technology | Purpose | Version |
+|------------|---------|---------|
+| **React** | Frontend Framework | 19.1.1 |
+| **Vite** | Build Tool & Dev Server | 7.1.2 |
+| **React Router** | Client-side Routing | 7.8.2 |
+| **Bootstrap** | CSS Framework | 5.3.8 |
+| **AOS** | Scroll Animations | 2.3.4 |
+| **React Icons** | Icon Library | 5.5.0 |
+
 ## 🚀 Getting Started
 
-Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+### Prerequisites
 
----
+Before you begin, ensure you have the following installed:
 
-### ✅ Prerequisites
+- **Node.js** (v18 or higher) - [Download here](https://nodejs.org/)
+- **npm** or **yarn** - Package manager
+- **Git** - Version control
 
-Before you begin, ensure you have the following installed on your system:
+### Installation
 
-- **Node.js and npm**  
-  This project requires Node.js and the Node Package Manager (npm).  
-  You can download the LTS version from [nodejs.org](https://nodejs.org).
-
----
-
-### ⚙️ Installation
-
-1. **Clone the repository to your local machine**:
-
-   ```sh
+1. **Clone the repository**
+   ```bash
    git clone https://github.com/Jayesh370/LMS-System-React.git
-   
-Navigate into the project directory:
+   cd LMS-System-React
+   ```
 
-**cd LMS-React**
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Install all dependencies:
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-The package.json file includes all necessary libraries. Run the following command in your terminal to install them all at once:
+4. **Open your browser**
+   Navigate to `http://localhost:5173` to view the application
 
-**npm install**
+## 📜 Available Scripts
 
-This single command will install:
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Starts the development server |
+| `npm run build` | Builds the app for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint for code quality |
 
-react-router-dom,
-bootstrap,
-aos,
-react-icons,
 
-and any other required packages.
+## 🔧 Development
 
-▶️ Available Scripts
+### Code Style
+- ESLint configuration for code quality
+- Modern ES6+ JavaScript features
+- Component-based architecture
+- Responsive design patterns
 
-In the project directory, you can run:
+### Performance
+- Vite for fast development and building
+- Code splitting and lazy loading ready
+- Optimized asset handling
+- Modern browser support
 
-Start development server:
+The build artifacts will be stored in the `dist/` directory.
 
-**npm run dev**
+## 🤝 Contributing
 
-This runs the app in development mode.
-Open the local URL shown in your terminal (usually http://localhost:5173) to view it in your browser.
-The page will automatically reload when you make changes.
+We welcome contributions! Please follow these steps:
+
+1. Fork the repository (No need if you're one of the collaborators)
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+---
+
