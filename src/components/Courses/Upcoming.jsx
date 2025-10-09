@@ -12,13 +12,13 @@ const Upcoming = () => {
       <div className="container mt-2">
       <nav className="nav2">
         <button>
-          <Link to="/courses">Courses</Link>
+          <Link to="/Courses">Courses</Link>
         </button>
         <button>
-          <Link to="/courses/upcoming">Upcoming Courses/Workshops</Link>
+          <Link to="/Courses/upcoming">Upcoming Courses/Workshops</Link>
         </button>
         <button>
-          <Link to="/courses/ongoing">Ongoing Courses</Link>
+          <Link to="/Courses/ongoing">Ongoing Courses</Link>
         </button>
       </nav>
       </div>

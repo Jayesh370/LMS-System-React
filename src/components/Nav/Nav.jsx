@@ -2,7 +2,9 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/Final_Logo.png";
 import "./Nav.css"
+import { useAuth } from "../../context/AuthContext.jsx";
 const Nav = () => {
+  const { isAuthenticated, user, logout } = useAuth();
   return (
     <header>
       <nav
@@ -65,10 +67,26 @@ const Nav = () => {
               </li>
             </ul>
 
-            {/* Button */}
-            <NavLink to="/" className="btn btn-success ms-3">
-              Get Started
-            </NavLink>
+            {/* Auth Buttons */}
+            {isAuthenticated() ? (
+              <div className="d-flex align-items-center ms-3">
+                <span className="navbar-text me-2">
+                  Hi, {user?.name || user?.email}
+                </span>
+                <button className="btn btn-outline-danger" onClick={logout}>
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <div className="d-flex align-items-center">
+                <NavLink to="/login" className="btn btn-outline-primary ms-3">
+                  Login
+                </NavLink>
+                <NavLink to="/register" className="btn btn-success ms-2">
+                  Get Started
+                </NavLink>
+              </div>
+            )}
           </div>
         </div>
       </nav>
