@@ -37,9 +37,11 @@ jobs:
       - name: Upload production build
         uses: actions/upload-artifact@v4
         with:
-          name: dist
+          name: dist-${{ matrix.os }}-${{ github.run_attempt }}
           path: dist/
           if-no-files-found: error
+          retention-days: 7
+          overwrite: true
 
   audit:
     name: Security Audit (npm)
