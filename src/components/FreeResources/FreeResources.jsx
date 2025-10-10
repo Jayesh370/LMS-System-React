@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './FreeResources.css'; // Your CSS file
+import './FreeResources.css';
 
 // A custom hook to handle the intersection observer logic
 const useAnimateOnScroll = (options) => {
@@ -7,6 +7,7 @@ const useAnimateOnScroll = (options) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const node = ref.current;
     const observer = new IntersectionObserver(([entry]) => {
       // Only trigger once
       if (entry.isIntersecting) {
@@ -15,20 +16,19 @@ const useAnimateOnScroll = (options) => {
       }
     }, options);
 
-    if (ref.current) {
-      observer.observe(ref.current);
+    if (node) {
+      observer.observe(node);
     }
 
     return () => {
-      if (ref.current) {
-        observer.unobserve(ref.current);
+      if (node) {
+        observer.unobserve(node);
       }
     };
-  }, [ref, options]);
+  }, [options]);
 
   return [ref, isVisible];
 };
-
 
 function FreeResources() {
   // State for the subscription form

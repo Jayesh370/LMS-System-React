@@ -73,7 +73,7 @@ const Register = () => {
     setLoading(true);
 
     try {
-      const { confirmPassword, ...registerData } = formData;
+      const { confirmPassword: _confirmPassword, ...registerData } = formData;
       const response = await authService.register(registerData);
 
       // Assuming the API returns { token, user }
@@ -104,23 +104,18 @@ const Register = () => {
 
               {error && (
                 <div className="alert alert-danger" role="alert">
-                  <i className="bi bi-exclamation-triangle-fill me-2"></i>
                   {error}
                 </div>
               )}
 
               <form onSubmit={handleSubmit} className="auth-form">
                 <div className="form-group">
-                  <label htmlFor="name">
-                    <FaUser className="me-2" />
-                    Full Name *
-                  </label>
+                  <label htmlFor="name">Full Name *</label>
                   <input
                     type="text"
                     className="form-control"
                     id="name"
                     name="name"
-                    placeholder="Enter your full name"
                     value={formData.name}
                     onChange={handleChange}
                     required
@@ -128,16 +123,12 @@ const Register = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="email">
-                    <FaEnvelope className="me-2" />
-                    Email Address *
-                  </label>
+                  <label htmlFor="email">Email Address *</label>
                   <input
                     type="email"
                     className="form-control"
                     id="email"
                     name="email"
-                    placeholder="Enter your email"
                     value={formData.email}
                     onChange={handleChange}
                     required
@@ -145,73 +136,29 @@ const Register = () => {
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="phone">
-                    <FaPhone className="me-2" />
-                    Phone Number
-                  </label>
+                  <label htmlFor="password">Password *</label>
                   <input
-                    type="tel"
+                    type={showPassword ? "text" : "password"}
                     className="form-control"
-                    id="phone"
-                    name="phone"
-                    placeholder="Enter your phone number"
-                    value={formData.phone}
+                    id="password"
+                    name="password"
+                    value={formData.password}
                     onChange={handleChange}
+                    required
                   />
                 </div>
 
                 <div className="form-group">
-                  <label htmlFor="password">
-                    <FaLock className="me-2" />
-                    Password *
-                  </label>
-                  <div className="password-input-wrapper">
-                    <input
-                      type={showPassword ? "text" : "password"}
-                      className="form-control"
-                      id="password"
-                      name="password"
-                      placeholder="Create a password (min. 6 characters)"
-                      value={formData.password}
-                      onChange={handleChange}
-                      required
-                    />
-                    <button
-                      type="button"
-                      className="password-toggle"
-                      onClick={() => setShowPassword(!showPassword)}
-                    >
-                      {showPassword ? <FaEyeSlash /> : <FaEye />}
-                    </button>
-                  </div>
-                </div>
-
-                <div className="form-group">
-                  <label htmlFor="confirmPassword">
-                    <FaLock className="me-2" />
-                    Confirm Password *
-                  </label>
-                  <div className="password-input-wrapper">
-                    <input
-                      type={showConfirmPassword ? "text" : "password"}
-                      className="form-control"
-                      id="confirmPassword"
-                      name="confirmPassword"
-                      placeholder="Confirm your password"
-                      value={formData.confirmPassword}
-                      onChange={handleChange}
-                      required
-                    />
-                    <button
-                      type="button"
-                      className="password-toggle"
-                      onClick={() =>
-                        setShowConfirmPassword(!showConfirmPassword)
-                      }
-                    >
-                      {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
-                    </button>
-                  </div>
+                  <label htmlFor="confirmPassword">Confirm Password *</label>
+                  <input
+                    type={showConfirmPassword ? "text" : "password"}
+                    className="form-control"
+                    id="confirmPassword"
+                    name="confirmPassword"
+                    value={formData.confirmPassword}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
 
                 <div className="form-check mb-3">
@@ -223,39 +170,18 @@ const Register = () => {
                     onChange={(e) => setAcceptTerms(e.target.checked)}
                   />
                   <label className="form-check-label" htmlFor="acceptTerms">
-                    I agree to the{" "}
-                    <Link to="/terms" className="auth-link">
-                      Terms & Conditions
-                    </Link>
+                    I agree to the Terms & Conditions
                   </label>
                 </div>
 
-                <button
-                  type="submit"
-                  className="btn btn-primary btn-auth"
-                  disabled={loading}
-                >
-                  {loading ? (
-                    <>
-                      <span
-                        className="spinner-border spinner-border-sm me-2"
-                        role="status"
-                        aria-hidden="true"
-                      ></span>
-                      Creating Account...
-                    </>
-                  ) : (
-                    "Create Account"
-                  )}
+                <button type="submit" className="btn btn-primary" disabled={loading}>
+                  {loading ? "Creating Account..." : "Create Account"}
                 </button>
               </form>
 
-              <div className="auth-footer">
+              <div className="auth-footer mt-3">
                 <p>
-                  Already have an account?{" "}
-                  <Link to="/login" className="auth-link">
-                    Login here
-                  </Link>
+                  Already have an account? <Link to="/login">Login here</Link>
                 </p>
               </div>
             </div>
