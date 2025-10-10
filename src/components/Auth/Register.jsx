@@ -3,18 +3,11 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import authService from "../../services/authService";
 import "./Auth.css";
-import {
-  FaUser,
-  FaEnvelope,
-  FaLock,
-  FaEye,
-  FaEyeSlash,
-  FaPhone,
-} from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 const Register = () => {
-  const navigate = useNavigate();
   const { login } = useAuth();
+  const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
     name: "",
@@ -137,28 +130,46 @@ const Register = () => {
 
                 <div className="form-group">
                   <label htmlFor="password">Password *</label>
-                  <input
-                    type={showPassword ? "text" : "password"}
-                    className="form-control"
-                    id="password"
-                    name="password"
-                    value={formData.password}
-                    onChange={handleChange}
-                    required
-                  />
+                  <div className="password-input-wrapper">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className="form-control"
+                      id="password"
+                      name="password"
+                      value={formData.password}
+                      onChange={handleChange}
+                      required
+                    />
+                    <button
+                      type="button"
+                      className="password-toggle"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? <FaEyeSlash /> : <FaEye />}
+                    </button>
+                  </div>
                 </div>
 
                 <div className="form-group">
                   <label htmlFor="confirmPassword">Confirm Password *</label>
-                  <input
-                    type={showConfirmPassword ? "text" : "password"}
-                    className="form-control"
-                    id="confirmPassword"
-                    name="confirmPassword"
-                    value={formData.confirmPassword}
-                    onChange={handleChange}
-                    required
-                  />
+                  <div className="password-input-wrapper">
+                    <input
+                      type={showConfirmPassword ? "text" : "password"}
+                      className="form-control"
+                      id="confirmPassword"
+                      name="confirmPassword"
+                      value={formData.confirmPassword}
+                      onChange={handleChange}
+                      required
+                    />
+                    <button
+                      type="button"
+                      className="password-toggle"
+                      onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    >
+                      {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                    </button>
+                  </div>
                 </div>
 
                 <div className="form-check mb-3">
