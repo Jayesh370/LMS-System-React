@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./courses.css";
+import "./Courses.css";
 
 const Upcoming = () => {
   return (

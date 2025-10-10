@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./courses.css";
+import "./Courses.css";
 
 import PlacementPreparation from "../../assets/images/course-image/PlacementPreparation.png"
 import FullStackDevelopment from "../../assets/images/course-image/FullStackDevelopment.png"
