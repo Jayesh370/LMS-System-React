@@ -32,9 +32,6 @@ import Register from './components/Auth/Register.jsx';
 import { AuthProvider } from './context/AuthContext.jsx';
 
 
-//admin panel
-import Dashboard from './components/Admin/Dashboard.jsx';
-import ManageCourses from './components/Admin/ManageCoureses.jsx';
 const router=createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
