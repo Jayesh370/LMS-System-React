@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://raw.githubusercontent.com/<your-user>/<your-repo>/main/public/assets/Final_Logo.png" alt="Coding Savvy Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/Jayesh370/LMS-System-React/main/public/assets/Final_Logo.png" alt="Coding Savvy Logo" width="200"/>
 
   
   [![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
