@@ -47,18 +47,8 @@ const router=createBrowserRouter(
       <Route path='Placement' element={<Placement/>}/>
       <Route path='ProjectPortfolio' element={<ProjectPortfolio/>}/>
       <Route path='About' element={<About/>}/>
-<<<<<<< HEAD
 
 
-            {/* --- ADMIN ROUTES --- */}
-      <Route path='/admin' element={<Dashboard/>}>
-      <Route path='courses' element={<ManageCourses />} />
-      </Route>
-=======
-      <Route path='login' element={<Login/>} />
-      <Route path='register' element={<Register/>} />
-       
->>>>>>> origin/main
         {/* --- BLOG ROUTES --- */}
                 {/* --- BLOG ROUTES --- */}
         <Route path="/blog" element={<BlogLayout />}>
