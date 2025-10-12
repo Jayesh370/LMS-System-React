@@ -1,5 +1,6 @@
 <div align="center">
-  <img src="src/assets/Final_Logo.png" alt="Coding Savvy Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/<your-user>/<your-repo>/main/public/assets/Final_Logo.png" alt="Coding Savvy Logo" width="200"/>
+
   
   [![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
   [![Vite](https://img.shields.io/badge/Vite-7.1.2-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
@@ -88,5 +89,80 @@ We welcome contributions! Please follow these steps:
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
----
+
+## 🗄️ Backend (Node.js + Express)
+
+### Tech Stack (Backend)
+- **Node.js**: Runtime
+- **Express**: Web framework
+- **Helmet**: Security headers
+- **CORS**: Cross-origin resource sharing
+- **Morgan**: HTTP request logger
+- **Dotenv**: Environment variables
+- **Nodemon**: Dev auto-reload
+
+### Getting Started (Backend)
+1. Navigate to the backend folder
+   ```bash
+   cd backend
+   ```
+2. Copy env example and adjust if needed
+   ```bash
+   cp .env.example .env
+   ```
+3. Install dependencies
+   ```bash
+   npm install
+   ```
+4. Start the backend (dev)
+   ```bash
+   npm run dev
+   ```
+5. Server will run on `http://localhost:5000`
+
+### Available Scripts (Backend)
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start dev server with nodemon |
+| `npm start` | Start production server |
+
+### API Endpoints (Initial)
+- `GET /health` → Simple health-check
+- `GET /api/health` → Health-check via router
+
+### Backend Directory Structure
+```
+backend/
+  package.json
+  .env.example
+  nodemon.json
+  src/
+    app.js
+    server.js
+    config/
+      index.js
+    routes/
+      index.js
+    controllers/
+      health.controller.js
+    middlewares/
+      asyncHandler.js
+      errorHandler.js
+      notFound.js
+    utils/
+      logger.js
+    services/
+    models/
+```
+
+### Running Frontend and Backend Together
+- Start frontend from repo root:
+  ```bash
+  npm run dev
+  ```
+- Start backend from `backend/`:
+  ```bash
+  cd backend && npm run dev
+  ```
+
 
