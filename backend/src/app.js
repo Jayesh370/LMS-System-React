@@ -5,6 +5,7 @@ import morgan from 'morgan';
 import routes from './routes/index.js';
 import { notFound } from './middlewares/notFound.js';
 import { errorHandler } from './middlewares/errorHandler.js';
+import { env } from './config/index.js';
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(helmet());
 app.use(cors());
 app.use(express.json({ limit: '1mb' }));
 app.use(express.urlencoded({ extended: true }));
-app.use(morgan(process.env.NODE_ENV === 'production' ? 'combined' : 'dev'));
+app.use(morgan(env.NODE_ENV === 'production' ? 'combined' : 'dev'));
 
 app.use('/api', routes);
 
