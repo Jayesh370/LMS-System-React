@@ -49,6 +49,10 @@ const router=createBrowserRouter(
       <Route path='About' element={<About/>}/>
 
 
+          
+      <Route path='login' element={<Login/>} />
+      <Route path='register' element={<Register/>} />
+       
         {/* --- BLOG ROUTES --- */}
                 {/* --- BLOG ROUTES --- */}
         <Route path="/blog" element={<BlogLayout />}>
