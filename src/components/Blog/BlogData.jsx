@@ -144,7 +144,7 @@ export const blogPosts = [
         </ul>
 
         <div className="mt-4 text-center">
-          <a href="/courses" className="btn btn-primary">
+          <a href="/Courses" className="btn btn-primary">
             Explore Our Courses
           </a>
           <a href="/placement" className="btn btn-secondary">
@@ -290,7 +290,7 @@ export const blogPosts = [
         </ul>
 
         <div className="mt-4 text-center">
-          <a href="/courses" className="btn btn-primary">
+          <a href="/Courses" className="btn btn-primary">
             Explore Our Courses
           </a>
           <a href="/placement" className="btn btn-secondary ms-2">

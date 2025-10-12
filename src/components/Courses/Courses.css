@@ -2,20 +2,49 @@
 
 /* Headings */
 .first-heading {
+<<<<<<< HEAD
   background: linear-gradient(
     45deg,
     rgba(74, 144, 226, 0.2),
     rgba(22, 160, 133, 0.2)
   );
   color: #222;
+=======
+  background: linear-gradient(45deg,
+      rgba(74, 144, 226, 0.3),
+      rgba(22, 160, 133, 0.3));
+  color: black;
+>>>>>>> origin/main
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   height: 18rem;
   font-size: 1.5rem;
   flex-direction: column;
   padding: 20px;
+=======
+  height: 20rem;
+  /* applies well to all */
+}
+
+/*Temporary Change*/
+
+.hero-copy {
+  max-width: 800px;
+}
+
+.hero-title {
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+  color: #495057;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+>>>>>>> origin/main
 }
 
 /* Navigation */
@@ -27,6 +56,7 @@
   gap: 15px;
 }
 
+<<<<<<< HEAD
 .nav2 .tab {
   padding: 10px 20px;
   border: 1px solid #007BFF;
@@ -45,6 +75,10 @@
 .nav2 .active {
   background-color: #007BFF;
   color: white;
+=======
+.nav2 .btn {
+  min-width: 180px;
+>>>>>>> origin/main
 }
 
 /* Sections */
@@ -62,6 +96,7 @@
   padding: 20px;
 }
 
+<<<<<<< HEAD
 /* Course Card */
 .course-card {
   background-color: #fff;
@@ -88,15 +123,59 @@
   border-radius: 10px;
   background-color: #f5f5f5;
   margin-bottom: 15px;
+=======
+.course-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  /*Temporary Change*/
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(16, 24, 40, 0.08);
+  width: 280px;
+  padding: 20px;
+  text-align: center;
+  min-height: 250px;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.course-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.course-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.course-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.course-card:nth-child(4) {
+  animation-delay: 0.8s;
+>>>>>>> origin/main
+}
+
+/*Temporary Change*/
+.course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(16, 24, 40, 0.12);
 }
 
 /* Card Content */
 .course-card h3 {
+<<<<<<< HEAD
   margin: 10px 0 5px;
   font-size: 1.3rem;
   color: #007BFF;
   text-align: center;
+=======
+  margin: 10px 0;
+  color: #0d6efd;
+  font-size: 1.2rem;
+>>>>>>> origin/main
 }
+
 .course-card p {
   margin: 5px 0;
   color: #555;
@@ -111,21 +190,35 @@
   color: #222;
 }
 
+/*Temporary Change*/
+.course-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 /* Learn More Button */
 .learn-more {
   margin-top: auto;
   padding: 10px 20px;
-  background-color: #007BFF;
+  background-color: #0d6efd;
   color: white;
   border-radius: 8px;
   text-decoration: none;
   font-weight: bold;
   transition: all 0.3s ease;
 }
+
 .learn-more:hover {
+<<<<<<< HEAD
   background-color: #0056b3;
   color: white;
   transform: scale(1.05);
+=======
+  background-color: #0b5ed7;
+  transform: scale(1.1);
+>>>>>>> origin/main
 }
 
 /* ================= HOME PAGE EXTRAS ================= */
@@ -141,21 +234,35 @@
   font-size: 1rem;
   color: #333;
 }
+
 .hero-main .cta-btn {
+<<<<<<< HEAD
   padding: 12px 25px;
   background: #007BFF;
   color: white;
   border-radius: 8px;
+=======
+  padding: 12px 20px;
+  background: white;
+  color: #0d6efd;
+>>>>>>> origin/main
   font-weight: bold;
   text-decoration: none;
   margin-top: 15px;
   display: inline-block;
 }
+
 .hero-main .cta-btn:hover {
+<<<<<<< HEAD
   background: #0056b3;
 }
 
 /* Promo Banner */
+=======
+  background: #f3f4f6;
+}
+
+>>>>>>> origin/main
 .promo-banner {
   background: linear-gradient(90deg, #ff6a00, #ee0979);
   color: white;
@@ -166,6 +273,7 @@
   border-radius: 12px;
   text-align: center;
 }
+
 .btn-offer {
   display: inline-block;
   background: white;
@@ -177,7 +285,10 @@
   margin-top: 10px;
 }
 
+<<<<<<< HEAD
 /* Course Grid */
+=======
+>>>>>>> origin/main
 .course-grid {
   display: flex;
   flex-wrap: wrap;
@@ -191,15 +302,42 @@
     opacity: 0;
     transform: translateY(20px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
+<<<<<<< HEAD
 /* Responsive */
 @media (max-width: 768px) {
   .course-card {
     width: 90%;
+=======
+@keyframes bounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+>>>>>>> origin/main
   }
 }

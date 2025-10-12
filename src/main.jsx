@@ -27,6 +27,9 @@ import ProjectPortfolio from './components/ProjectPortfolio/ProjectPortfolio.jsx
 import Blog from './components/Blog/Blog.jsx';
 import BlogLayout from './components/Blog/BlogLayout.jsx';
 import BlogPost from './components/Blog/BlogPost.jsx';
+import Login from './components/Auth/Login.jsx';
+import Register from './components/Auth/Register.jsx';
+import { AuthProvider } from './context/AuthContext.jsx';
 
 
 //admin panel
@@ -44,12 +47,18 @@ const router=createBrowserRouter(
       <Route path='Placement' element={<Placement/>}/>
       <Route path='ProjectPortfolio' element={<ProjectPortfolio/>}/>
       <Route path='About' element={<About/>}/>
+<<<<<<< HEAD
 
 
             {/* --- ADMIN ROUTES --- */}
       <Route path='/admin' element={<Dashboard/>}>
       <Route path='courses' element={<ManageCourses />} />
       </Route>
+=======
+      <Route path='login' element={<Login/>} />
+      <Route path='register' element={<Register/>} />
+       
+>>>>>>> origin/main
         {/* --- BLOG ROUTES --- */}
                 {/* --- BLOG ROUTES --- */}
         <Route path="/blog" element={<BlogLayout />}>
@@ -66,6 +75,8 @@ const router=createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <AuthProvider>
+      <RouterProvider router={router}/>
+    </AuthProvider>
   </StrictMode>,
 )

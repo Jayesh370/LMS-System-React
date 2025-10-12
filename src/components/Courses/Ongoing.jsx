@@ -1,8 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import CourseCard from "./CourseCard";
 import { courses } from "./CourseData";
 import "./Courses.css";
+=======
+import "./Courses.css";
+
+import PlacementPreparation from "../../assets/images/course-image/PlacementPreparation.png"
+import FullStackDevelopment from "../../assets/images/course-image/FullStackDevelopment.png"
+import JavaFundamentals from "../../assets/images/course-image/JavaFundamentals.png"
+import MobileAppDevelopment from "../../assets/images/course-image/MobileAppDevelopment.png"
+>>>>>>> origin/main
 
 const Ongoing = () => {
   // Filter courses for ongoing category
@@ -16,6 +25,7 @@ const Ongoing = () => {
 
       {/* Navigation */}
       <div className="container mt-2">
+<<<<<<< HEAD
         <div className="nav2">
           <Link to="/courses" className="tab">
             Featured
@@ -27,6 +37,19 @@ const Ongoing = () => {
             Upcoming
           </Link>
         </div>
+=======
+      <nav className="nav2">
+        <button>
+          <Link to="/Courses">Courses</Link>
+        </button>
+        <button>
+          <Link to="/Courses/upcoming">Upcoming Courses/Workshops</Link>
+        </button>
+        <button>
+          <Link to="/Courses/ongoing">Ongoing Courses</Link>
+        </button>
+      </nav>
+>>>>>>> origin/main
       </div>
 
       {/* Courses Section */}

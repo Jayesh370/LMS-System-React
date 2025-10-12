@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+<<<<<<< HEAD
 import CourseCard from "./CourseCard";
 import { courses } from "./CourseData";
+=======
+>>>>>>> origin/main
 import "./Courses.css";
 
 const Upcoming = () => {
@@ -16,6 +19,7 @@ const Upcoming = () => {
 
       {/* Navigation */}
       <div className="container mt-2">
+<<<<<<< HEAD
         <div className="nav2">
           <Link to="/courses" className="tab">
             Featured
@@ -27,6 +31,19 @@ const Upcoming = () => {
             Upcoming
           </Link>
         </div>
+=======
+      <nav className="nav2">
+        <button>
+          <Link to="/Courses">Courses</Link>
+        </button>
+        <button>
+          <Link to="/Courses/upcoming">Upcoming Courses/Workshops</Link>
+        </button>
+        <button>
+          <Link to="/Courses/ongoing">Ongoing Courses</Link>
+        </button>
+      </nav>
+>>>>>>> origin/main
       </div>
 
       {/* Courses Section */}
