@@ -25,8 +25,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/app-development-banner_33099-1720.jpg"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/app-development-banner_33099-1720.jpg"
+                  className="card-img-top"
                   alt="App Development"
                 />
                 <div className="card-body">
@@ -42,8 +42,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/79328284-f97b-489f-924c-eb3b17e34b56_image2.jpg"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/79328284-f97b-489f-924c-eb3b17e34b56_image2.jpg"
+                  className="card-img-top"
                   alt="MERN Development"
                 />
                 <div className="card-body">
@@ -59,8 +59,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/What-is-data-science-2.jpg"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/What-is-data-science-2.jpg"
+                  className="card-img-top"
                   alt="Data Science"
                 />
                 <div className="card-body">
@@ -89,8 +89,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/79328284-f97b-489f-924c-eb3b17e34b56_image2.jpg"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/79328284-f97b-489f-924c-eb3b17e34b56_image2.jpg"
+                  className="card-img-top"
                   alt="Completed Project 1"
                 />
                 <div className="card-body">
@@ -106,8 +106,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/app-development-banner_33099-1720.jpg"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/app-development-banner_33099-1720.jpg"
+                  className="card-img-top"
                   alt="Completed Project 2"
                 />
                 <div className="card-body">
@@ -123,8 +123,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/What-is-data-science-2.jpg"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/What-is-data-science-2.jpg"
+                  className="card-img-top"
                   alt="Completed Project 3"
                 />
                 <div className="card-body">
@@ -153,8 +153,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/img/case-study1.jpg"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/img/case-study1.jpg"
+                  className="card-img-top"
                   alt="Case Study 1"
                 />
                 <div className="card-body">
@@ -170,8 +170,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/img/premium_photo-1661375427386-64ac35086427.avif"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/img/premium_photo-1661375427386-64ac35086427.avif"
+                  className="card-img-top"
                   alt="Case Study 2"
                 />
                 <div className="card-body">
@@ -187,8 +187,8 @@ export default function ProjectPortfolio() {
             <div className="col-md-4">
               <div className="card">
                 <img
-                  src="images/projectPortfolio/img/premium_photo-1664301747246-ca55593015f1.avif"
-                  className="card-img-top img"
+                  src="/assets/images/projectPortfolio/img/premium_photo-1664301747246-ca55593015f1.avif"
+                  className="card-img-top"
                   alt="Case Study 3"
                 />
                 <div className="card-body">
@@ -224,8 +224,8 @@ export default function ProjectPortfolio() {
                   <div className="col-md-4 sCont">
                     <div className="card">
                       <img
-                        src="images/projectPortfolio/img/student1.jpg"
-                        className="card-img-top img"
+                        src="/assets/images/projectPortfolio/img/student1.jpg"
+                        className="card-img-top "
                         alt="Student 1"
                       />
                       <div className="card-body">
@@ -240,8 +240,8 @@ export default function ProjectPortfolio() {
                   <div className="col-md-4">
                     <div className="card">
                       <img
-                        src="images/projectPortfolio/img/student2.jpeg"
-                        className="card-img-top img"
+                        src="/assets/images/projectPortfolio/img/student2.jpeg"
+                        className="card-img-top"
                         alt="Student 2"
                       />
                       <div className="card-body">
@@ -256,8 +256,8 @@ export default function ProjectPortfolio() {
                   <div className="col-md-4">
                     <div className="card">
                       <img
-                        src="images/projectPortfolio/img/student3.png"
-                        className="card-img-top img"
+                        src="/assets/images/projectPortfolio/img/student3.png"
+                        className="card-img-top"
                         alt="Student 3"
                       />
                       <div className="card-body">
@@ -277,8 +277,8 @@ export default function ProjectPortfolio() {
                   <div className="col-md-4">
                     <div className="card">
                       <img
-                        src="images/projectPortfolio/img/student4.jpg"
-                        className="card-img-top img"
+                        src="/assets/images/projectPortfolio/img/student4.jpg"
+                        className="card-img-top"
                         alt="Student 4"
                       />
                       <div className="card-body">
@@ -293,8 +293,8 @@ export default function ProjectPortfolio() {
                   <div className="col-md-4">
                     <div className="card">
                       <img
-                        src="images/projectPortfolio/img/student5.jpg"
-                        className="card-img-top img"
+                        src="/assets/images/projectPortfolio/img/student5.jpg"
+                        className="card-img-top"
                         alt="Student 5"
                       />
                       <div className="card-body">
@@ -309,8 +309,8 @@ export default function ProjectPortfolio() {
                   <div className="col-md-4">
                     <div className="card">
                       <img
-                        src="images/projectPortfolio/img/student6.webp"
-                        className="card-img-top img"
+                        src="/assets/images/projectPortfolio/img/student6.webp"
+                        className="card-img-top"
                         alt="Student 6"
                       />
                       <div className="card-body">

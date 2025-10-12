@@ -1,7 +1,7 @@
 import React from "react";
 import { FaInstagram, FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/Final_Logo.png";
+import logo from "/assets/Final_Logo.png";
 import "./Footer.css";
 
 const Footer = () => {

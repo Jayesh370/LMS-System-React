@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './Contact.css'; // Import your CSS file
-import logoBackground from '../../assets/images/contact-images/Final_Logo56.png';
+import logoBackground from '/assets/images/contact-images/Final_Logo56.png';
 
 const Contact = () => {
   // Your state and handler functions remain the same

@@ -1,67 +1,48 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./courses.css";
-
-import PlacementPreparation from "../../assets/images/course-image/PlacementPreparation.png"
-import FullStackDevelopment from "../../assets/images/course-image/FullStackDevelopment.png"
-import JavaFundamentals from "../../assets/images/course-image/JavaFundamentals.png"
-import MobileAppDevelopment from "../../assets/images/course-image/MobileAppDevelopment.png"
+import CourseCard from "./CourseCard";
+import { courses } from "./CourseData";
+import "./Courses.css";
 
 const Ongoing = () => {
+  // Filter courses for ongoing category
+  const ongoingCourses = courses.filter(course => course.category === "ongoing");
+
   return (
     <div className="ongoing-courses">
       <div className="container first-heading">
         <h1>Ongoing Courses</h1>
       </div>
 
+      {/* Navigation */}
       <div className="container mt-2">
-      <nav className="nav2">
-        <button>
-          <Link to="/courses">Courses</Link>
-        </button>
-        <button>
-          <Link to="/courses/upcoming">Upcoming Courses/Workshops</Link>
-        </button>
-        <button>
-          <Link to="/courses/ongoing">Ongoing Courses</Link>
-        </button>
-      </nav>
+        <div className="nav2">
+          <Link to="/courses" className="tab">
+            Featured
+          </Link>
+          <Link to="/courses/ongoing" className="tab">
+            Ongoing
+          </Link>
+          <Link to="/courses/upcoming" className="tab">
+            Upcoming
+          </Link>
+        </div>
       </div>
 
+      {/* Courses Section */}
       <section className="section">
         <div className="course-container mb-5">
-          <div className="course-card">
-            <h3>JAVA Fundamentals</h3>
-            <img src={JavaFundamentals} alt="JAVA Fundamentals" />
-            <p>Duration</p>
-            <p>₹999</p>
-            <a href="#" className="learn-more">Learn More</a>
-          </div>
-
-          <div className="course-card">
-            <h3>Placement Preparation in Java</h3>
-            <img src={PlacementPreparation} alt="Placement Preparation" />
-            <p>Duration</p>
-            <p>₹4999</p>
-            <a href="#" className="learn-more">Learn More</a>
-          </div>
-
-          <div className="course-card">
-            <h3>Full Stack Web Development</h3>
-            <img src={FullStackDevelopment} alt="Full Stack Development" />
-            <p>Duration</p>
-            <p>₹7999</p>
-            <a href="#" className="learn-more">Learn More</a>
-          </div>
-
-          <div className="course-card">
-            <h3>Mobile App Development</h3>
-            <img src={MobileAppDevelopment} 
-            alt="Mobile App Development" />
-            <p>Duration</p>
-            <p>₹4999</p>
-            <a href="#" className="learn-more">Learn More</a>
-          </div>
+          {ongoingCourses.map(course => (
+            <CourseCard
+              key={course.id}
+              id={course.id}  
+              title={course.title}
+              image={course.image}
+              description={course.description}
+              duration={course.duration || "Duration not specified"}
+              price={course.price || "Price not specified"}
+            />
+          ))}
         </div>
       </section>
     </div>

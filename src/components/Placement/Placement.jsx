@@ -64,7 +64,7 @@ export default function Placement() {
                   className="bd-placeholder-img rounded-circle img-fluid border border-primary p-2 m-5"
                   width="140"
                   height="140"
-                  src="images/placement/aadesh.png"
+                  src="/assets/images/placement/aadesh.png"
                   alt="aadesh"
                 />
                 <h2 className="fw-normal">Aadesh</h2>
@@ -89,7 +89,7 @@ export default function Placement() {
                   className="bd-placeholder-img rounded-circle img-fluid border border-primary p-2 m-5"
                   width="140"
                   height="140"
-                  src="images/placement/devesh.png"
+                  src="/assets/images/placement/devesh.png"
                   alt="devesh"
                 />
                 <h2 className="fw-normal">Devesh</h2>
@@ -113,7 +113,7 @@ export default function Placement() {
                   className="bd-placeholder-img rounded-circle img-fluid border border-primary p-2 m-5"
                   width="140"
                   height="140"
-                  src="images/placement/khushal.jpg"
+                  src="/assets/images/placement/khushal.jpg"
                   alt="khushal"
                 />
                 <h2 className="fw-normal">Khushal</h2>
@@ -278,7 +278,7 @@ export default function Placement() {
                 </div>
                 <div className="col-auto d-none d-lg-block">
                   <img
-                    src="images/placement/pexels-photo-7644081.webp"
+                    src="/assets/images/placement/pexels-photo-7644081.webp"
                     alt="resume"
                     className="bd-placeholder-img img-fluid"
                     width="200"
@@ -308,7 +308,7 @@ export default function Placement() {
                 </div>
                 <div className="col-auto d-none d-lg-block">
                   <img
-                    src="images/placement/pexels-photo-7579188.webp"
+                    src="/assets/images/placement/pexels-photo-7579188.webp"
                     alt="interview"
                     className="bd-placeholder-img img-fluid"
                     width="200"

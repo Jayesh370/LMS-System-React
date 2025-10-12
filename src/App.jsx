@@ -5,6 +5,7 @@ import Footer from "./components/footer/Footer.jsx";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import ScrollToTop from "./components/ScrollToTop.jsx";
 
 
 
@@ -18,6 +19,7 @@ function App() {
   }, []);
   return (
     <>
+      <ScrollToTop />
       <Nav/>
       <Outlet/>
       <Footer/>
