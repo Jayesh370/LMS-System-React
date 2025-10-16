@@ -133,26 +133,25 @@ We welcome contributions! Please follow these steps:
 ### Backend Directory Structure
 ```
 backend/
-  package.json
-  .env.example
-  nodemon.json
-  src/
-    app.js
-    server.js
-    config/
-      index.js
-    routes/
-      index.js
-    controllers/
-      health.controller.js
-    middlewares/
-      asyncHandler.js
-      errorHandler.js
-      notFound.js
-    utils/
-      logger.js
-    services/
-    models/
+├── node_modules/
+├── .env.example
+├── .gitignore
+├── package.json
+├── server.js             # Main entry point (starts the server)
+└── src/
+    ├── app.js            # Express application configuration (middlewares, routes setup)
+    ├── config/
+    │   └── db.js         # Database connection logic (MySQL)
+    ├── controllers/      # Business Logic (User management, authentication functions)
+    │   └── authController.js
+    ├── middlewares/      # Express Middleware (Security, logging, etc.)
+    │   └── rateLimiter.js  # Rate limiting middleware
+    ├── models/           # Database Schemas/Definitions
+    ├── routes/           # API Endpoint Definitions (e.g., /api/auth)
+    │   └── authRoutes.js
+    ├── services/         # Complex business operations (e.g., external API calls)
+    └── utils/            # Utility functions (e.g., sendEMail.js, logger)
+        └── sendEMail.js
 ```
 
 ### Running Frontend and Backend Together
