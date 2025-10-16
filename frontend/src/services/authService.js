@@ -1,14 +1,11 @@
-import axios from "axios";
-
-const API_BASE_URL =
-  import.meta.env.VITE_API_URL?.trim() || "http://localhost:5000/api";
+import axiosInstance from "../utils/axiosConfig.js";
 
 const authService = {
   // Register a new user
   register: async (userData) => {
     try {
-      const response = await axios.post(
-        `${API_BASE_URL}/auth/register`,
+      const response = await axiosInstance.post(
+        `/auth/register`,
         userData
       );
       return response.data;
@@ -20,7 +17,7 @@ const authService = {
   // Verify OTP after registration
   verifyOtp: async ({ email, otp }) => {
     try {
-      const response = await axios.post(`${API_BASE_URL}/auth/verify-otp`, { email, otp });
+      const response = await axiosInstance.post(`/auth/verify-otp`, { email, otp });
       return response.data;
     } catch (error) {
       throw error.response?.data || { message: "OTP verification failed" };
@@ -30,8 +27,8 @@ const authService = {
   // Login user
   login: async (credentials) => {
     try {
-      const response = await axios.post(
-        `${API_BASE_URL}/auth/login`,
+      const response = await axiosInstance.post(
+        `/auth/login`,
         credentials
       );
       return response.data;
@@ -43,7 +40,7 @@ const authService = {
   // Verify token
   verifyToken: async (token) => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/auth/verify`, {
+      const response = await axiosInstance.get(`/auth/verify`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -57,7 +54,7 @@ const authService = {
   // Get user profile
   getProfile: async (token) => {
     try {
-      const response = await axios.get(`${API_BASE_URL}/auth/profile`, {
+      const response = await axiosInstance.get(`/auth/profile`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

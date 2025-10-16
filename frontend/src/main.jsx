@@ -1,4 +1,4 @@
-import { StrictMode,React } from 'react'
+import { StrictMode } from 'react'
 import {createRoot } from 'react-dom/client'
 
 import App from './App.jsx'
@@ -8,7 +8,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import './index.css';
 
-import { createBrowserRouter, createRoutesFromElements, Route,Routes, Router, RouterProvider } from 'react-router-dom'
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
 
 //Course page related
 import Courses from './components/Courses/Courses.jsx';
@@ -16,7 +16,6 @@ import Ongoing from "./components/Courses/Ongoing.jsx";
 import Upcoming from "./components/Courses/Upcoming.jsx";
 import CourseDetails from './components/Courses/CourseDetails.jsx';
 
-import { Children } from 'react';
 import About from './components/AboutUs/About.jsx'
 import Contact from './components/ContactUs/Contact.jsx';
 import FreeResources from './components/FreeResources/FreeResources.jsx';

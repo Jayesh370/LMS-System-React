@@ -13,7 +13,6 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Form data submitted:', formData);
     alert('Thank you for your message!');
     setFormData({ name: '', email: '', course: '', message: '' });
   };

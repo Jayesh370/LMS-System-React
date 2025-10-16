@@ -5,7 +5,7 @@
 # 1. DEPENDENCIES AND BUILD ARTIFACTS
 # Global exclusions for both frontend and backend
 **/node_modules
-/dist
+**/dist
 /build
 /coverage
 /lib
@@ -54,6 +54,7 @@ Thumbs.db
 
 # 6. FRONTEND-SPECIFIC OUTPUTS (Paths relative to root)
 /dist-ssr
+/frontend/dist/
 /frontend/dist-ssr # Just in case it creates a local one
 
 # 7. LOCK FILES (MUST BE COMMITTED FOR CI/CD)
