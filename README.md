@@ -128,8 +128,9 @@ We welcome contributions! Please follow these steps:
 
 ### API Endpoints (Initial)
 The backend exposes endpoints under the /api route prefix. All authentication routes require the authLimiter middleware for security.
-- `GET /health` → Simple health-check
-- `GET /api/health` → Health-check via router
+- `POST /api/auth/register` → User registration (Includes rate limiting)
+- `POST /api/auth/verify-otp` → OTP verification after registration (Includes rate limiting)
+- `POST /api/auth/login` → User login (Includes rate limiting)
 
 ### Backend Directory Structure
 ```
