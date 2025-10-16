@@ -6,6 +6,7 @@ import CourseCard from "./CourseCard";
 import { courses } from "./CourseData"; // Central data file
 import "./Courses.css";
 import NewFullStackDevelopment from "/assets/images/course-image/NewFullStackDevelopment.webp";
+import backendImage from "/assets/images/course-image/BackendDevelopment.png";
 
 const CoursesHome = () => {
   // Filter only featured courses
