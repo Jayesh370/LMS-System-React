@@ -1,29 +1,60 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+# ==================================================
+# Single Root .gitignore for Full-Stack Project
+# ==================================================
 
-node_modules
-dist
-dist-ssr
-*.local
+# 1. DEPENDENCIES AND BUILD ARTIFACTS
+# Global exclusions for both frontend and backend
+**/node_modules
+/dist
+/build
+/coverage
+/lib
+.cache/
 
-# Environment variables
+# 2. ENVIRONMENT FILES (CRITICAL: DO NOT COMMIT SECRETS)
+# Excludes .env files everywhere, but keeps the example template.
 .env
 .env.*
 !.env.example
+*.local
 
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
+# 3. LOGS AND DEBUGGING
+# Excludes all log files everywhere
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.out
+*.pid
+*.seed
+*.pid.lock
+
+# 4. OS AND EDITOR SPECIFIC FILES
 .DS_Store
+Thumbs.db
+.vscode/
+.idea/
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.swp
+*.swo
+
+# 5. BACKEND-SPECIFIC OUTPUTS (Paths relative to root)
+/backend/public/uploads/
+/backend/uploads/
+/backend/data/
+/backend/*.sqlite
+/backend/*.db
+/backend/*.sql
+
+# 6. FRONTEND-SPECIFIC OUTPUTS (Paths relative to root)
+/dist-ssr
+/frontend/dist-ssr # Just in case it creates a local one
+
+# 7. LOCK FILES (MUST BE COMMITTED FOR CI/CD)
+# NOTE: package-lock.json and yarn.lock are NOT listed here and MUST be committed.
