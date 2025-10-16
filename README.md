@@ -127,6 +127,7 @@ We welcome contributions! Please follow these steps:
 | `npm start` | Start production server |
 
 ### API Endpoints (Initial)
+The backend exposes endpoints under the /api route prefix. All authentication routes require the authLimiter middleware for security.
 - `GET /health` → Simple health-check
 - `GET /api/health` → Health-check via router
 
