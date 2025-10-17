@@ -72,3 +72,61 @@
   margin-top: 6px;
   font-size: 0.9rem;
 }
+
+/* GitHub OAuth Button */
+.btn-github {
+  width: 100%;
+  padding: 12px 16px;
+  font-weight: 600;
+  font-size: 15px;
+  background-color: #24292e;
+  color: #ffffff;
+  border: 2px solid #24292e;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.btn-github:hover {
+  background-color: #2f363d;
+  border-color: #2f363d;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(36, 41, 46, 0.3);
+}
+
+.btn-github:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(36, 41, 46, 0.3);
+}
+
+.github-icon {
+  font-size: 20px;
+}
+
+/* Divider */
+.auth-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 20px 0;
+  color: #6c757d;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.auth-divider span {
+  padding: 0 12px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #6c757d;
+}

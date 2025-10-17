@@ -1,14 +1,13 @@
 import { db } from "../config/db.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import { sendEmail } from "../utils/sendEmail.js";
+import { sendEmail } from "../utils/sendEMail.js";
 
 const saltRounds = 10;
 
 // Helper: Generate 6-digit OTP
 const generateOTP = () => Math.floor(100000 + Math.random() * 900000).toString();
 
-// -------------------- REGISTER --------------------
 export const register = async (req, res) => {
   const { name, email, phone, password } = req.body;
 
@@ -49,7 +48,6 @@ export const register = async (req, res) => {
   }
 };
 
-// -------------------- VERIFY OTP --------------------
 export const verifyOTP = async (req, res) => {
   const { email, otp } = req.body;
 
@@ -76,7 +74,6 @@ export const verifyOTP = async (req, res) => {
   }
 };
 
-// -------------------- LOGIN --------------------
 export const login = async (req, res) => {
   const { email, password } = req.body;
 
@@ -100,5 +97,30 @@ export const login = async (req, res) => {
   } catch (err) {
     console.error(err);
     res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const verifyToken = async (req, res) => {
+  try {
+    // If middleware passed token is valid
+    return res.json({ valid: true });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Server error" });
+  }
+};
+
+export const profile = async (req, res) => {
+  try {
+    const userId = req.user?.id;
+    if (!userId) return res.status(401).json({ message: "Unauthorized" });
+
+    const [rows] = await db.query("SELECT id, name, email, phone, is_verified, created_at FROM users WHERE id = ?", [userId]);
+    if (rows.length === 0) return res.status(404).json({ message: "User not found" });
+
+    return res.json({ user: rows[0] });
+  } catch (err) {
+    console.error(err);
+    return res.status(500).json({ message: "Server error" });
   }
 };

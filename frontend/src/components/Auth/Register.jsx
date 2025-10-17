@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./Auth.css";
 import authService from "../../services/authService";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { FaEye, FaEyeSlash, FaGithub } from "react-icons/fa";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -72,6 +72,12 @@ const Register = () => {
     }
   };
 
+  const handleGithubLogin = () => {
+    const apiBase = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+    const base = apiBase.replace(/\/$/, "");
+    window.location.href = `${base}/auth/github/login`;
+  };
+
   const handleVerifyOtp = async (e) => {
     e.preventDefault();
     if (!otp) {
@@ -111,23 +117,23 @@ const Register = () => {
                 <form onSubmit={handleRegister} className="auth-form">
                   <div className="form-group">
                     <label htmlFor="name">Full Name *</label>
-                    <input type="text" id="name" name="name" className="form-control" value={formData.name} onChange={handleChange} required />
+                    <input type="text" id="name" name="name" className="form-control" placeholder="Enter your full name" value={formData.name} onChange={handleChange} required />
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="email">Email *</label>
-                    <input type="email" id="email" name="email" className="form-control" value={formData.email} onChange={handleChange} required />
+                    <input type="email" id="email" name="email" className="form-control" placeholder="Enter your email address" value={formData.email} onChange={handleChange} required />
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="phone">Phone</label>
-                    <input type="text" id="phone" name="phone" className="form-control" value={formData.phone} onChange={handleChange} />
+                    <input type="text" id="phone" name="phone" className="form-control" placeholder="Enter your phone number (optional)" value={formData.phone} onChange={handleChange} />
                   </div>
 
                   <div className="form-group">
                     <label htmlFor="password">Password *</label>
                     <div className="password-input-wrapper">
-                      <input type={showPassword ? "text" : "password"} id="password" name="password" className="form-control" value={formData.password} onChange={handleChange} required />
+                      <input type={showPassword ? "text" : "password"} id="password" name="password" className="form-control" placeholder="Create a strong password" value={formData.password} onChange={handleChange} required />
                       <button type="button" className="password-toggle" onClick={() => setShowPassword(!showPassword)}>
                         {showPassword ? <FaEyeSlash /> : <FaEye />}
                       </button>
@@ -137,7 +143,7 @@ const Register = () => {
                   <div className="form-group">
                     <label htmlFor="confirmPassword">Confirm Password *</label>
                     <div className="password-input-wrapper">
-                      <input type={showConfirmPassword ? "text" : "password"} id="confirmPassword" name="confirmPassword" className="form-control" value={formData.confirmPassword} onChange={handleChange} required />
+                      <input type={showConfirmPassword ? "text" : "password"} id="confirmPassword" name="confirmPassword" className="form-control" placeholder="Re-enter your password" value={formData.confirmPassword} onChange={handleChange} required />
                       <button type="button" className="password-toggle" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
                         {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
                       </button>
@@ -152,12 +158,21 @@ const Register = () => {
                   <button type="submit" className="btn btn-primary" disabled={loading}>
                     {loading ? "Creating Account..." : "Create Account"}
                   </button>
+
+                  <div className="auth-divider">
+                    <span>OR</span>
+                  </div>
+
+                  <button type="button" className="btn-github" onClick={handleGithubLogin}>
+                    <FaGithub className="github-icon" />
+                    Continue with GitHub
+                  </button>
                 </form>
               ) : (
                 <form onSubmit={handleVerifyOtp} className="auth-form">
                   <div className="form-group">
                     <label htmlFor="otp">Enter OTP *</label>
-                    <input type="text" id="otp" name="otp" className="form-control" value={otp} onChange={(e) => setOtp(e.target.value)} required />
+                    <input type="text" id="otp" name="otp" className="form-control" placeholder="Enter the 6-digit OTP sent to your email" value={otp} onChange={(e) => setOtp(e.target.value)} required />
                   </div>
 
                   <button type="submit" className="btn btn-primary" disabled={loading}>
