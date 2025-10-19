@@ -1,6 +1,6 @@
 import express from "express";
 import { register, verifyOTP, login, verifyToken, profile } from "../controllers/authController.js";
-import { authLimiter, makeAuthLimiter } from "../middlewares/rateLimiter.js"; 
+import { apiLimiter, authLimiter, makeAuthLimiter } from "../middlewares/rateLimiter.js"; 
 import { requireAuth } from "../middlewares/auth.js";
 import { validateRegistration, validateLogin, validateOTP } from "../middlewares/validation.js";
 import passport from "../config/passport.js";
@@ -20,8 +20,8 @@ router.post("/verify-otp", emailLimiter, validateOTP, verifyOTP);
 router.post("/login", emailLimiter, validateLogin, login); 
 
 // Protected routes
-router.get("/verify", requireAuth, verifyToken);
-router.get("/profile", requireAuth, profile);
+router.get("/verify", apiLimiter, requireAuth, verifyToken);
+router.get("/profile", apiLimiter, requireAuth, profile);
 
 // GitHub OAuth
 router.get(
