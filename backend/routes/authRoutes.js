@@ -1,6 +1,6 @@
 import express from "express";
 import { register, verifyOTP, login, verifyToken, profile } from "../controllers/authController.js";
-import { authLimiter } from "../middlewares/rateLimiter.js"; 
+import { authLimiter, makeAuthLimiter } from "../middlewares/rateLimiter.js"; 
 import { requireAuth } from "../middlewares/auth.js";
 import { validateRegistration, validateLogin, validateOTP } from "../middlewares/validation.js";
 import passport from "../config/passport.js";
@@ -10,11 +10,14 @@ const router = express.Router();
 
 // Apply authLimiter and validation to each sensitive route:
 
-router.post("/register", authLimiter, validateRegistration, register); 
+// Per-identifier limiter (IP + email); skipSuccessfulRequests enabled inside factory
+const emailLimiter = makeAuthLimiter(["email"]);
 
-router.post("/verify-otp", authLimiter, validateOTP, verifyOTP); 
+router.post("/register", emailLimiter, validateRegistration, register); 
 
-router.post("/login", authLimiter, validateLogin, login); 
+router.post("/verify-otp", emailLimiter, validateOTP, verifyOTP); 
+
+router.post("/login", emailLimiter, validateLogin, login); 
 
 // Protected routes
 router.get("/verify", requireAuth, verifyToken);
